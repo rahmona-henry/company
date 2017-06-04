@@ -13,19 +13,16 @@ $(document).ready(function(){
     // Prevent default anchor click behavior
     event.preventDefault();
 
-
-    const offset = $(this.hash).offset();
-          if (!offset) {
-          	return;
-          }
     // Store hash
-    // const hash = this.hash;
+    const hash = this.hash;
 
     // Using jQuery's animate() method to add smooth page scroll
     // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-      scrollTop: offset.top
-    }, 900, function(){
+    $('html, body').animate
+    ({
+      scrollTop:$(hash).offset().top
+    },
+    900, function(){
 
       // Add hash (#) to URL when done scrolling (default click behavior)
       window.location.hash = hash;
