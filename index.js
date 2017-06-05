@@ -4,7 +4,7 @@ const $ =require('jquery')
 
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href*='#myPage']").on('click', function(event) {
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
    // Make sure this.hash has a value before overriding default behavior
   if (this.hash !== "") {
@@ -19,7 +19,7 @@ $(document).ready(function(){
     // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
     $('html, body').animate
     ({
-      scrollTop:$(hash).offset().top
+      scrollTop: $(hash).offset().top
     },
     900, function(){
 
